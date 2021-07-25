@@ -41,6 +41,8 @@ var da=0;
 var ra=0;
 var la=0;
 function keyPressed(){
+    // the ua da ra la are for the purpose so that "snake can not move to the opposite direction that is :
+    // moving downword, the snake can not immediately move upward and same for the left right direction"
     if(keyCode == UP_ARROW && da==0){
         ua=1;
         da=0;

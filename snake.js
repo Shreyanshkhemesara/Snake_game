@@ -1,4 +1,5 @@
 function Snake(){
+    //initialising the positions and speed
      this.x = 0;
      this.y=0;
      this.xspeed = 1;
@@ -6,6 +7,7 @@ function Snake(){
      this.total = 0;
      this.tail = [];
      this.update = function(){
+         // loopingly movig the snake accordingly
          if(this.total==this.tail.length){
              for(var i=0; i<this.tail.length-1; i++){
                  this.tail[i]=this.tail[i+1];
@@ -44,11 +46,13 @@ function Snake(){
      }
      
      this.dir= function(x,y){
+         //changing the direction of snake
          this.xspeed=x;
          this.yspeed=y;
      }
 
      this.eat = function(pos){
+         //returns if snake reached the food's "pos" (the variable in the function(pos)
         var d = dist(this.x, this.y, pos.x, pos.y);
         if(d<1){
             this.total++;
