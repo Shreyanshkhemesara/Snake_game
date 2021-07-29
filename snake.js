@@ -28,12 +28,14 @@ function Snake(){
              var pos = this.tail[i];
              var d = dist(this.x, this.y, pos.x, pos.y);
              if(d<1){
-                 console.log("died!");
-                //  var k = "your score: " + toString(this.total);
-                //  console.log(k)
-                 (window.alert('YOU DIED!'));
+                 console.log("died! in dead function");
+                 //  var k = "your score: " + toString(this.total);
+                 //  console.log(k)
+                //  (window.alert('YOU DIED!'));
                  this.total=0;
                  this.tail = [];
+                 console.log("return true");
+                 return true;
              }
          }
      }

@@ -16,23 +16,41 @@
         <style>
             #head{
                 background-color: gray;
-                color: white;
+                color: linear-gradient(green, yellow);
                 font: impact;
-                font-size: xx-large;
+                font-size: 86px;
                 align-items: center;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: 'Lobster', cursive;
             }
             #canvas{
                 border: 1;
                 border-color: white;
                 border-radius: 5;
             }
-            #body{
-                background-color: gray;
+            html, body {
+            height: 100%;
+            background-color: grey;
+            }
+
+            body {
+            margin: 0;
+            display: flex;
+            background-color: grey;
+            /* This centers our sketch horizontally. */
+            justify-content: center;
+
+            /* This centers our sketch vertically. */
+            align-items: center;
             }
             #scoreD{
+                /* position: absolute; */
+                /* margin-left: 2px; */
+                font-weight: bold;
+                font-family: 'Lobster', cursive;
                 font-size: x-large;
                 color: white;
+                height: 66px;
+                width: 182px;
             }
         </style>    
     </head>
@@ -42,15 +60,21 @@
         <![endif]-->
         <div id="head">Snake</div>
         <canvas id="canvas"></canvas>
+        <div id="main">
         <div id="scoreD">
-            your present score:
+            Score: 0
+            High Score: 0
+            <!-- <div id="highScored">
+                Highest score: 0
+            </div> -->
+        </div>
             <script src="sketch.js"type="text/javascript">
               document.write(score)
             </script>
-          </div>
-        <script src="sketch.js" async defer></script>
-        <script src="snake.js"></script>
-        <script src= "food.js"></script>
+          <script src="sketch.js" async defer></script>
+          <script src="snake.js"></script>
+          <script src= "food.js"></script>
+        </div>
         <!-- <div id="scorebaaji">
             score:
         </div> -->
